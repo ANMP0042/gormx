@@ -1,4 +1,4 @@
-module github/ANMP0042/gormx
+module github.com/ANMP0042/gormx
 
 go 1.18
 

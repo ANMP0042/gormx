@@ -10,8 +10,8 @@ package mysqlx
 import (
 	"context"
 	"fmt"
-	"github/ANMP0042/gormx/common/errorx"
-	"github/ANMP0042/gormx/configx"
+	"github.com/ANMP0042/gormx/common/errorx"
+	"github.com/ANMP0042/gormx/configx"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"reflect"
