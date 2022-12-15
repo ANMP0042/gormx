@@ -7,6 +7,8 @@
  */
 package configx
 
+import "github.com/ANMP0042/gormx/common/logger"
+
 type Config struct {
 	User                      string
 	Passwd                    string
@@ -14,8 +16,10 @@ type Config struct {
 	Port                      int
 	Dbname                    string
 	Dsn                       string
+	LogLevel                  logger.LogLevel
 	DisableDatetimePrecision  bool
 	DontSupportRenameIndex    bool
 	DontSupportRenameColumn   bool
 	SkipInitializeWithVersion bool
+	SingularTable             bool
 }

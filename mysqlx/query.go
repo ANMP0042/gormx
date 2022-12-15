@@ -13,7 +13,7 @@ type (
 		q      string
 		v      any
 
-		w       Where
+		w       *Wherex
 		in      *whereIn
 		between *whereBetween
 	}
@@ -32,7 +32,7 @@ type (
 	FindQueryOption func(fq *findQuery)
 )
 
-func newQuery(w Where, q string, v any, opts ...QueryOption) *query {
+func newQuery(w *Wherex, q string, v any, opts ...QueryOption) *query {
 	qy := &query{w: w, q: q, v: v}
 
 	for _, opt := range opts {

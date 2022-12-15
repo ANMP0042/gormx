@@ -15,6 +15,8 @@ type (
 	}
 
 	UpdateOption func(uv *UpdateValue)
+
+	Update map[string]interface{}
 )
 
 func NewUpdateValue(column string, value any, opts ...UpdateOption) *UpdateValue {
