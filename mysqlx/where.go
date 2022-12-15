@@ -96,6 +96,8 @@ func (w *Wherex) Set(sql []Sql) *Wherex {
 	return w
 }
 
+// notice whereBetween 值能是any string int三种类型 其他类型不会加入到where中
+// 如果需要其他类型 可以使用FirstInBetween 详见mysql_test.go
 func (w *Wherex) toSql() (sql string, args []any) {
 	if len(w.Sql) == 0 {
 		return
