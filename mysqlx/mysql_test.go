@@ -75,7 +75,7 @@ func TestMysql_FirstInWhereIn(t *testing.T) {
 
 	inUser := User{}
 	w := NewWherex()
-	w.SAdd("created_at", BETWEEN, []int64{1, 2})
+	w.SAdd("created_at", BETWEEN, []int64{1, 2}).SAdd("id", "", 1)
 	err = m.First(w, "id", &inUser)
 	fmt.Println(err)
 	fmt.Println("inUser", inUser)
