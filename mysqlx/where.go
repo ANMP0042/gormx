@@ -134,7 +134,6 @@ func (w *Wherex) toSql() (sql string, args []any) {
 			args = append(args, wSql.Value)
 		}
 
-		fmt.Println("13132123132131")
 		s = append(s, tmp)
 	}
 	return strings.Join(s, " AND "), args
